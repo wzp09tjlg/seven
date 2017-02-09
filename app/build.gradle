@@ -1,0 +1,57 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
+    defaultConfig {
+        applicationId "com.jia.seven"
+        minSdkVersion 15
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        debug {
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    dataBinding {
+        enabled true
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+
+    // Network Framework
+    compile retrofit
+    compile converter_gson
+    compile retrofit2_rxjava2_adapter
+    compile okhttp_logging_interceptor
+    compile okhttp
+    // Reactive Programming Codeing Framework
+    compile rxandroid
+    compile rxjava
+    // Image Loader Framework
+    compile glide
+    compile glide_okhttp3
+    // Google Support Lib
+    compile rootProject.ext.support_dependencies["v7"]
+    compile rootProject.ext.support_dependencies["v4"]
+    compile rootProject.ext.support_dependencies["design"]
+    compile rootProject.ext.support_dependencies["appcompat_v7"]
+    compile rootProject.ext.support_dependencies["multidex"]
+    // Test Framework
+    testCompile junit
+    debugCompile logutils_debug
+    releaseCompile logutils_release
+    testCompile logutils_debug
+    debugCompile leakcanary_debug
+    releaseCompile leakcanary_release
+    testCompile leakcanary_test
+}

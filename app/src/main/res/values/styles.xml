@@ -1,0 +1,67 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="CommonDialogStyle" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <!--<item name="android:windowBackground">@drawable/dialog_custom_bg</item>-->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!--<item name="android:backgroundDimEnabled">false</item>-->
+    </style>
+
+    <!-- 设置写故事dialog弹出，退出动画 -->
+    <style name="EditorDialog" mce_bogus="1" parent="@android:style/Animation.Dialog">
+        <item name="android:windowEnterAnimation">@anim/anim_dialog_enter</item>
+        <item name="android:windowExitAnimation">@anim/anim_dialog_exit</item>
+    </style>
+
+
+    <!--主界面tablayout-->
+    <style name="MainTabLayout" parent="Widget.Design.TabLayout">
+        <item name="tabIndicatorColor">@android:color/transparent</item>
+        <item name="tabIndicatorHeight">0dp</item>
+        <item name="tabPaddingStart">12dp</item>
+        <item name="tabPaddingEnd">12dp</item>
+        <item name="tabBackground">@android:color/transparent</item>
+        <item name="tabSelectedTextColor">@android:color/transparent</item>
+        <!--<item name="tabBackground">@color/tab_bgcolor</item>-->
+        <!--<item name="tabSelectedTextColor">?android:textColorPrimary</item>-->
+    </style>
+
+    <!--精选tab栏style-->
+    <style name="ChoiceTabLayout" parent="Widget.Design.TabLayout">
+        <item name="tabTextColor">@color/color_tab_text</item>
+        <item name="tabSelectedTextColor">@color/color_tab_text_select</item>
+        <item name="tabTextAppearance">@style/CustomTabTextAppearance</item>
+        <item name="tabMinWidth">48dp</item>
+        <!--<item name="tabMinWidth">@dimen/tab_max_width</item>-->
+        <item name="tabPaddingStart">16dp</item>
+        <item name="tabPaddingEnd">16dp</item>
+        <item name="tabIndicatorColor">@color/color_tab_text_select</item>
+        <item name="tabBackground">@android:color/transparent</item>
+    </style>
+
+    <!--关注tablayout-->
+    <style name="FavoriteTabLayout" parent="ChoiceTabLayout">
+        <!--<item name="tabSelectedTextColor">@color/color_tab_text_select</item>-->
+        <!--<item name="tabTextColor">@color/color_tab_text</item>-->
+        <!--<item name="tabTextAppearance">@style/CustomTabTextAppearance</item>-->
+        <item name="tabPaddingStart">0dp</item>
+        <item name="tabPaddingEnd">0dp</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="CustomTabTextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textAllCaps" tools:targetApi="ice_cream_sandwich">false</item>
+    </style>
+</resources>

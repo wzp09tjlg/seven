@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:gravity="center_horizontal"
+                  android:orientation="vertical" >
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <ImageView
+            android:id="@+id/error_layout_img"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:layout_centerInParent="true"
+            android:paddingBottom="18dp"
+            android:src="@drawable/no_login_layout_img"/>
+
+        <TextView
+            android:id="@+id/erro_layout_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/favorite_not_login"
+            android:layout_centerHorizontal="true"
+            android:textSize="16sp"
+            android:textColor="#666666"/>
+
+        <Button
+            android:id="@+id/login_button"
+            android:layout_width="108dp"
+            android:layout_height="35dp"
+            android:background="@drawable/user_login_bg"
+            android:text="@string/login_text"
+            android:textColor="#333333"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="24dp"
+            android:textSize="16sp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+</layout>

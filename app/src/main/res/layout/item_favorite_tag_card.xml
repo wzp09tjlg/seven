@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:tools="http://schemas.android.com/tools"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/animation_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="4dp"
+            android:paddingTop="4dp">
+
+            <RelativeLayout
+                android:id="@+id/card_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/icon_card_bg">
+
+                <LinearLayout
+                    android:id="@+id/favorite_item_header"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/list_item_bg_selector"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingBottom="15dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="12dp">
+
+                    <ImageView
+                        android:id="@+id/favorite_header_avatar"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:layout_centerVertical="true"
+                        android:padding="3dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/favorite_tag"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_toRightOf="@id/favorite_header_avatar"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/favorite_header_text1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:singleLine="true"
+                            android:textColor="#333333"
+                            android:textSize="16sp"
+                            tools:text="我的名字"/>
+
+                        <TextView
+                            android:id="@+id/favorite_header_text2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginTop="2dp"
+                            android:layout_toRightOf="@id/favorite_header_avatar"
+                            android:ellipsize="end"
+                            android:singleLine="true"
+                            android:textColor="#b4b4b4"
+                            android:textSize="13sp"
+                            tools:text="我的名字"/>
+
+                    </LinearLayout>
+
+                    <include layout="@layout/favorite_follow_button"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/favorite_story_group"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/favorite_item_header"
+                    android:orientation="vertical">
+
+                    <include layout="@layout/item_favorite_story"/>
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/favorite_update_tip"
+                    android:layout_width="13dp"
+                    android:layout_height="13dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:src="@drawable/update_tip"
+                    android:visibility="gone"/>
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingLeft="7dp"
+    android:paddingRight="7dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/text_view"
+        style="@style/CustomTabTextAppearance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:textColor="#222"
+        tools:text="@string/app_name"/>
+
+    <ImageView
+        android:id="@+id/tip_view"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_alignTop="@id/text_view"
+        android:layout_alignRight="@id/text_view"
+        android:scaleType="fitXY"
+        android:padding="3dp"
+        android:src="@drawable/drawable_hot_point"
+        android:visibility="invisible"/>
+
+</RelativeLayout>
+</layout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="TagView">
+        <attr name="circle_color" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="AspectratioView">
+        <attr name="width_radio" format="float" />
+        <attr name="height_radio" format="float" />
+    </declare-styleable>
+</resources>

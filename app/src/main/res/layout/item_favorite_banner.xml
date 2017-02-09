@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.jia.seven.view.widget.DynamicHeightImageView
+    android:id="@+id/favorite_grid_image"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:src="@drawable/icon_loading_rectangle_no_wifi"
+    android:scaleType="centerCrop"
+    app:height_radio="0.5625"/>

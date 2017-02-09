@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">seven</string>
+    /***************************************************/
+    /*** widget参数 ***/
+    /***************************************************/
+
+
+    /***************************************************/
+    /*** Activity参数 ***/
+    /***************************************************/
+    <!--Login-->
+    <string name="login_text">登 录</string>
+
+    <!-- Favorite -->
+    <string name="favorite_user_story_count">故事数：%1$s 篇</string>
+    <string name="favorite_not_login">您还没有登录，请登录后查看关注</string>
+
+    <string name="loadinfo_loadmore">加载更多</string>
+    <string name="loadinfo_loadmoreing">加载中</string>
+    <string name="loadinfo_loadmore_failed">加载失败，点此重试</string>
+</resources>
