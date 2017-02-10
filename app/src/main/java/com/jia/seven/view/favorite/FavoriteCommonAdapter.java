@@ -47,7 +47,7 @@ public class FavoriteCommonAdapter extends RecyclerView.Adapter<SimpleRecyclerVi
 
     @Override
     public int getItemViewType(int position) {
-        if(mData.get(position).type == null) return DATA_TYPE_CARD_TAG; //异常的数据
+        if(mData.get(position).type == null) return DATA_TYPE_CARD_TAG; //ps.测试环境的数据有时是异常数据
         if(mData.get(position).type.equals(DATA_TYPE_NAME_TAG)){
             return DATA_TYPE_CARD_TAG;
         }
@@ -72,7 +72,7 @@ public class FavoriteCommonAdapter extends RecyclerView.Adapter<SimpleRecyclerVi
         int tempType = getItemViewType(position);
         FavoriteList.Card item = mData.get(position);
         if(tempType == DATA_TYPE_CARD_TAG){
-            if(item.type == null){//出现空数据
+            if(item.type == null){//PS.测试环境的数据有时是异常数据
                 holder.getView(R.id.favorite_item_header).setTag("empty data");
                 holder.getView(R.id.favorite_item_header).setOnClickListener(null);
                 holder.setText(R.id.favorite_header_text1, "empty data");

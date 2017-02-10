@@ -14,7 +14,6 @@ import java.util.Map;
 /**
  * Created by wu on 2017/2/9.
  */
-
 public class FavoriteMinePresenter extends BasePresenter<FavoriteAContract.MineFavorite> implements
     FavoriteAContract.Presenter
 {
@@ -49,7 +48,6 @@ public class FavoriteMinePresenter extends BasePresenter<FavoriteAContract.MineF
                         mvpView.getPage(page);
                     }
                 }
-                LogUtils.e("model:" + model.toString());
 
                 // header的数据第一次调用时更新
                 if (page == S_FRIST_PAGE) {
@@ -71,7 +69,6 @@ public class FavoriteMinePresenter extends BasePresenter<FavoriteAContract.MineF
 
             @Override
             public void onFailure(Error error) {
-                LogUtils.e("error:" + error);
                 mvpView.error(Error.S_NETWORK_UNCONNECT);
                 mvpView.hideLoading();
             }
